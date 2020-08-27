@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Waypoint{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('waypoint-edit') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('waypoint-edit') }}
+{% endblock %}
+
+{% block body %}
+    <a href="{{ path('waypoint_index') }}">back to list</a>
+
+    {{ include('waypoint/_delete_form.html.twig') }}
+
+    <h1>Edit Waypoint</h1>
+
+    <hr>
+    <div class="row">
+        <div class="col-sm-8">
+            <h3>Details</h3>
+            {{ include('waypoint/_form.html.twig', {'button_label': 'Update'}) }}
+        </div>
+        <div class="col-sm-4">
+            <h3>References</h3>
+
+            <ul class="list-group small js-reference-list" data-url="{{ path('admin_article_list_references', {id: waypoint.id}) }}"></ul>
+
+{#            <ul class="list-group small">#}
+{#                {% for reference in waypoint.waypointReferences %}#}
+{#                    <li class="list-group-item d-flex justify-content-between align-items-center">#}
+{#                        {{ reference.originalFilename }}#}
+
+{#                        <span>#}
+{#                            <a href="{{ path('admin_waypoint_download_reference', {#}
+{#                                id: reference.id#}
+{#                            }) }}"><span class="fa fa-download"></span>D</a>#}
+{#                        </span>#}
+{#                    </li>#}
+{#                {% endfor %}#}
+{#            </ul>#}
+
+            <hr>
+
+            <form action="{{ path('admin_waypoint_add_reference', {
+                id: waypoint.id
+            }) }}" method="POST" enctype="multipart/form-data" class="dropzone js-reference-dropzone">
+                <input type="file" name="reference">
+                <button type="submit" class="btn btn-sm btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

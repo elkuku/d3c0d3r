@@ -1,0 +1,20 @@
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-sm-9">
+        {{ form_row(form.imageFile, {
+            attr: {
+                'placeholder': 'Select an article image'
+            }
+        }) }}
+    </div>
+    <div class="col-sm-3">
+        {% if form.vars.data.imageFilename %}
+        <a href="{{ uploaded_asset(form.vars.data.imagePath) }}" target="_blank">
+            <img src="{{ form.vars.data.imagePath|imagine_filter('squared_thumbnail_small') }}" height="100">
+        </a>
+        {% endif %}
+    </div>
+</div>
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
