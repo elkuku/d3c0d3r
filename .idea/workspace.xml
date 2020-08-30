@@ -11,29 +11,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_26_08_20__08_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/d3c0d3r.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/cache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/oneup_flysystem.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/oneup_flysystem.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/WaypointController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/WaypointController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/WaypointReferenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/WaypointReferenceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Waypoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Waypoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/WaypointReference.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/WaypointReferenceRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/UploaderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UploaderHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Twig/AppExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Twig/AppExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +55,16 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="PhpDebugGeneral" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="5cdb9378-33f6-4225-9a80-eaa120bc74a9" name="127.0.0.1" port="45989" />
+      <server host="127.0.0.1" id="603623f3-ec1a-45f7-87c6-dd69baf275bc" name="127.0.0.1 (1)" port="41139" />
+      <server host="127.0.0.1" id="3b7fc36a-5288-4a0a-890b-3c392ebd312e" name="127.0.0.1 (2)" port="44409" />
+      <server host="127.0.0.1" id="076ef5de-0b4e-40e9-bdf3-5a236de6e433" name="127.0.0.1 (3)" port="40263" />
+      <server host="127.0.0.1" id="be871a4a-5233-4747-bfaa-546e7d35d6bf" name="127.0.0.1 (4)" port="42993" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -160,10 +177,23 @@
       <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/oneup/flysystem-bundle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/aws/aws-sdk-php" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-aws-s3-v3" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-client" />
+      <path value="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-google" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gdd2a1Wa8XvEsjxC91dPSm8bMQ" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -175,13 +205,27 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller" />
+      <recent name="$PROJECT_DIR$/assets/img" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller" />
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -192,6 +236,21 @@
       <option name="presentableId" value="Default" />
       <updated>1598448196923</updated>
     </task>
+    <task id="LOCAL-00001" summary="idea">
+      <created>1598536404756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598536404756</updated>
+    </task>
+    <task id="LOCAL-00002" summary="prep...">
+      <created>1598536451118</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598536451118</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,8 +269,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea" />
+    <MESSAGE value="prep..." />
+    <option name="LAST_COMMIT_MESSAGE" value="prep..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598451971751">
@@ -222,13 +284,108 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="653" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1598449584974" />
-    <state x="755" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1598456828760">
+    <state x="755" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1598706910871">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="755" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1598456828760" />
+    <state x="755" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1598706910871" />
+    <state x="698" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598706805701">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="698" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598706805701" />
+    <state x="100" y="100" width="1720" height="844" key="DiffContextDialog" timestamp="1598794497926">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="100" y="100" width="1720" height="844" key="DiffContextDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598794497925" />
+    <state x="748" y="279" key="FileChooserDialogImpl" timestamp="1598792853133">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="748" y="279" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1598792853132" />
+    <state width="1870" height="326" key="GridCell.Tab.0.bottom" timestamp="1598752057110">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057110" />
+    <state width="1870" height="326" key="GridCell.Tab.0.center" timestamp="1598752057110">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057110" />
+    <state width="1870" height="326" key="GridCell.Tab.0.left" timestamp="1598752057109">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057109" />
+    <state width="1870" height="326" key="GridCell.Tab.0.right" timestamp="1598752057110">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057110" />
+    <state width="1870" height="326" key="GridCell.Tab.1.bottom" timestamp="1598752057111">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057111" />
+    <state width="1870" height="326" key="GridCell.Tab.1.center" timestamp="1598752057111">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.1.center/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057111" />
+    <state width="1870" height="326" key="GridCell.Tab.1.left" timestamp="1598752057110">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.1.left/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057110" />
+    <state width="1870" height="326" key="GridCell.Tab.1.right" timestamp="1598752057111">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.1.right/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057111" />
+    <state width="1870" height="326" key="GridCell.Tab.2.bottom" timestamp="1598752057113">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.2.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057113" />
+    <state width="1870" height="326" key="GridCell.Tab.2.center" timestamp="1598752057112">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.2.center/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057112" />
+    <state width="1870" height="326" key="GridCell.Tab.2.left" timestamp="1598752057111">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.2.left/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057111" />
+    <state width="1870" height="326" key="GridCell.Tab.2.right" timestamp="1598752057112">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1870" height="326" key="GridCell.Tab.2.right/0.0.1920.1044@0.0.1920.1044" timestamp="1598752057112" />
     <state x="714" y="226" key="NewPhpClassDialog" timestamp="1598456777100">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="714" y="226" key="NewPhpClassDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598456777100" />
+    <state x="446" y="156" key="SettingsEditor" timestamp="1598793786164">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="446" y="156" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1598793786164" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Parser/Type/MultiExportJson.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/ImportController.php</url>
+          <line>64</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Service/WayPointHelper.php</url>
+          <line>83</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Service/WayPointHelper.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Service/UploaderHelper.php</url>
+          <line>124</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

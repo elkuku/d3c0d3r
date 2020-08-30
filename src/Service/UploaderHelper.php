@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use League\Flysystem\AdapterInterface;
 use League\Flysystem\FileNotFoundException;
 use League\Flysystem\FilesystemInterface;
 use Psr\Log\LoggerInterface;
@@ -13,37 +14,26 @@ class UploaderHelper
 {
     public const WAYPOINT_IMAGE = 'wp_images';
     public const WAYPOINT_REFERENCE = 'wp_reference';
-    /**
-     * @var RequestStackContext
-     */
+
     private RequestStackContext $requestStackContext;
-    /**
-     * @var FilesystemInterface
-     */
     private FilesystemInterface $filesystem;
-    private FilesystemInterface $privateFilesystem;
-    /**
-     * @var LoggerInterface
-     */
     private LoggerInterface $logger;
 
     private string $publicAssetBaseUrl;
 
     public function __construct(
-        FilesystemInterface $publicUploadsFilesystem,
-        FilesystemInterface $privateUploadsFilesystem,
+        FilesystemInterface $uploadsFilesystem,
         RequestStackContext $requestStackContext,
         LoggerInterface $logger,
         string $uploadedAssetsBaseUrl
     ) {
         $this->requestStackContext = $requestStackContext;
-        $this->filesystem = $publicUploadsFilesystem;
-        $this->privateFilesystem = $privateUploadsFilesystem;
+        $this->filesystem = $uploadsFilesystem;
         $this->logger = $logger;
         $this->publicAssetBaseUrl = $uploadedAssetsBaseUrl;
     }
 
-    public function uploadArticleImage(
+    public function uploadImage(
         File $file,
         ?string $existingFilename
     ): string {
@@ -81,62 +71,89 @@ class UploaderHelper
         return $this->uploadFile($file, self::WAYPOINT_REFERENCE, false);
     }
 
-    private function uploadFile(File $file, string $directory, bool $isPublic)
-    {
-        if ($file instanceof UploadedFile) {
-            $originalFilename = $file->getClientOriginalName();
-        } else {
-            $originalFilename = $file->getFilename();
-        }
-        $newFilename = pathinfo($originalFilename, PATHINFO_FILENAME).'-'
-            .uniqid().'.'.$file->guessExtension();
-        $stream = fopen($file->getPathname(), 'r');
-        $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
-        $result = $filesystem->writeStream(
-            $directory.'/'.$newFilename,
-            $stream
-        );
-        if ($result === false) {
-            throw new \Exception(
-                sprintf('Could not write uploaded file "%s"', $newFilename)
-            );
-        }
-        if (is_resource($stream)) {
-            fclose($stream);
-        }
-
-        return $newFilename;
-    }
-
     public function getPublicPath(string $path): string
     {
+        $fullPath = $this->publicAssetBaseUrl.'/'.$path;
+
+        // if it's already absolute, just return
+        if (strpos($fullPath, '://') !== false) {
+            return $fullPath;
+        }
+
+        // needed if you deploy under a subdirectory
         return $this->requestStackContext
                 ->getBasePath().$this->publicAssetBaseUrl.'/'.$path;
     }
 
     /**
      * @return resource
+     * @throws FileNotFoundException
      */
-    public function readStream(string $path, bool $isPublic)
+    public function readStream(string $path)
     {
-        $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
-
-        $resource = $filesystem->readStream($path);
+        $resource = $this->filesystem->readStream($path);
 
         if ($resource === false) {
-            throw new \Exception(sprintf('Error opening stream for "%s"', $path));
+            throw new \Exception(
+                sprintf('Error opening stream for "%s"', $path)
+            );
         }
+
         return $resource;
     }
 
-    public function deleteFile(string $path, bool $isPublic)
+    public function deleteFile(string $path): void
     {
-        $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
-
-        $result = $filesystem->delete($path);
+        $result = $this->filesystem->delete($path);
 
         if ($result === false) {
             throw new \Exception(sprintf('Error deleting "%s"', $path));
         }
+    }
+
+    private function uploadFile(
+        File $file,
+        string $directory,
+        bool $isPublic
+    ): string {
+        if ($file instanceof UploadedFile) {
+            $originalFilename = $file->getClientOriginalName();
+        } else {
+            $originalFilename = $file->getFilename();
+        }
+
+        // $newFilename = pathinfo($originalFilename, PATHINFO_FILENAME).'-'
+        //     .uniqid().'.'.$file->guessExtension();
+
+        $newFilename = $originalFilename;
+
+        if ($this->filesystem->has($directory.'/'.$newFilename)) {
+            return $newFilename;
+        }
+
+        $stream = fopen($file->getPathname(), 'r');
+
+        // $filesystem = $isPublic ? $this->filesystem : $this->privateFilesystem;
+
+        $result = $this->filesystem->writeStream(
+            $directory.'/'.$newFilename,
+            $stream,
+            [
+                'visibility' => $isPublic ? AdapterInterface::VISIBILITY_PUBLIC
+                    : AdapterInterface::VISIBILITY_PRIVATE,
+            ]
+        );
+
+        if ($result === false) {
+            throw new \Exception(
+                sprintf('Could not write uploaded file "%s"', $newFilename)
+            );
+        }
+
+        if (is_resource($stream)) {
+            fclose($stream);
+        }
+
+        return $newFilename;
     }
 }

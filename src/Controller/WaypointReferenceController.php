@@ -5,18 +5,19 @@ namespace App\Controller;
 use App\Entity\Waypoint;
 use App\Entity\WaypointReference;
 use App\Service\UploaderHelper;
+use Aws\S3\S3Client;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\HeaderUtils;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\ConstraintViolation;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class WaypointReferenceController extends AbstractController
@@ -108,34 +109,45 @@ class WaypointReferenceController extends AbstractController
      * @Route("/waypoint/references/{id}/download", name="admin_waypoint_download_reference", methods={"GET"})
      */
     public function downloadWaypointReference(
-        WaypointReference $reference,
-        UploaderHelper $uploaderHelper
-    ) {
+        WaypointReference $reference, S3Client $s3Client, string $s3BucketName
+    ): RedirectResponse {
         // $article = $reference->getWaypoint();
         // $this->denyAccessUnlessGranted('MANAGE', $article);
-        $response = new StreamedResponse(
-            function () use ($reference, $uploaderHelper) {
-                $outputStream = fopen('php://output', 'wb');
-                $fileStream = $uploaderHelper->readStream(
-                    $reference->getFilePath(),
-                    false
-                );
-                stream_copy_to_stream($fileStream, $outputStream);
-            }
-        );
-
-        $response->headers->set('Content-Type', $reference->getMimeType());
 
         $disposition = HeaderUtils::makeDisposition(
             HeaderUtils::DISPOSITION_ATTACHMENT,
             $reference->getOriginalFilename()
         );
 
-        $response->headers->set('Content-Disposition', $disposition);
+        $command = $s3Client->getCommand('GetObject', [
+            'Bucket' => $s3BucketName,
+            'Key' => $reference->getFilePath(),
+            'ResponseContentType' => $reference->getMimeType(),
+            'ResponseContentDisposition' => $disposition,
+        ]);
 
-        // dd($disposition);
+        $request = $s3Client->createPresignedRequest($command, '+30 minutes');
 
-        return $response;
+        return new RedirectResponse((string) $request->getUri());
+
+        // $response = new StreamedResponse(
+        //     function () use ($reference, $uploaderHelper) {
+        //         $outputStream = fopen('php://output', 'wb');
+        //         $fileStream = $uploaderHelper->readStream(
+        //             $reference->getFilePath()
+        //         );
+        //         stream_copy_to_stream($fileStream, $outputStream);
+        //     }
+        // );
+        //
+        // $response->headers->set('Content-Type', $reference->getMimeType());
+        //
+        //
+        // $response->headers->set('Content-Disposition', $disposition);
+        //
+        // // dd($disposition);
+        //
+        // return $response;
     }
 
     /**
@@ -151,8 +163,6 @@ class WaypointReferenceController extends AbstractController
                 'groups' => ['main'],
             ]
         );
-
-        return $this->json($waypoint->getWaypointReferences());
     }
 
     /**
@@ -168,7 +178,7 @@ class WaypointReferenceController extends AbstractController
 
         $entityManager->remove($reference);
         $entityManager->flush();
-        $uploaderHelper->deleteFile($reference->getFilePath(), false);
+        $uploaderHelper->deleteFile($reference->getFilePath());
 
         return new Response(null, 204);
     }
@@ -224,7 +234,7 @@ class WaypointReferenceController extends AbstractController
         Waypoint $waypoint,
         Request $request,
         EntityManagerInterface $entityManager
-    ) {
+    ): JsonResponse {
         $orderedIds = json_decode($request->getContent(), true);
 
         if ($orderedIds === null) {

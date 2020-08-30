@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Login{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{#    <script type="text/javascript" src="{{ asset('build/js/default/background.js') }}"></script>#}
+{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col">
+                <h2>Login</h2>
+                <a href="{{ path('connect_google_start') }}" title="Google Login">
+                    <img src="{{ asset('build/img/btn_google_signin_dark_normal_web.png') }}"
+                         alt="Google Login">
+                </a>
+            </div>
+            <div class="col">
+                {% if 'dev' == app.environment %}
+                    <h2>Dev</h2>
+                    <form class="form-inline" role="form" method="post" action="{{ path('login') }}">
+                        {% if error %}
+                            <div class="alert alert-danger">
+                                {{ error.message }}
+                            </div>
+                        {% endif %}
+
+                        <div class="form-group">
+                            {# <label for="email" class="col-md-4 control-label">e-mail</label> #}
+                            <input id="email" class="form-control" name="email" value="{{ last_username }}"
+                                   placeholder="e-mail" required autofocus>
+                        </div>
+
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

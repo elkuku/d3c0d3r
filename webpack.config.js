@@ -25,8 +25,9 @@ Encore
      */
     .addEntry('app', './assets/js/app.js')
     .addEntry('waypoint-edit', './assets/js/waypoint-edit.js')
-    //.addEntry('page1', './assets/js/page1.js')
-    //.addEntry('page2', './assets/js/page2.js')
+    .addEntry('map', './assets/js/map.js')
+    .addEntry('map-decode', './assets/js/map-decode.js')
+    .addEntry('gallery', './assets/js/gallery.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -70,6 +71,11 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
+
+    .copyFiles({
+        from: './assets/img',
+        to: 'img/[path][name].[ext]',
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();

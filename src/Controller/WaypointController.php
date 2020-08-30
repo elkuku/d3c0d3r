@@ -3,11 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\Waypoint;
+use App\Form\WaypointFormTypeDetails;
 use App\Form\WaypointType;
 use App\Repository\WaypointRepository;
 use App\Service\UploaderHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -43,7 +45,7 @@ class WaypointController extends AbstractController
             /** @var UploadedFile $uploadedFile */
             $uploadedFile = $form['imageFile']->getData();
             if ($uploadedFile) {
-                $newFilename = $uploaderHelper->uploadArticleImage($uploadedFile, $waypoint->getImageFilename());
+                $newFilename = $uploaderHelper->uploadImage($uploadedFile, $waypoint->getImageFilename());
                 $waypoint->setImageFilename($newFilename);
             }
 
@@ -64,7 +66,7 @@ class WaypointController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="waypoint_show", methods={"GET"})
+     * @Route("/{id}", name="waypoint_show", methods={"GET"}, requirements={"id"="\d+"})
      */
     public function show(Waypoint $waypoint): Response
     {
@@ -88,7 +90,7 @@ class WaypointController extends AbstractController
             /** @var UploadedFile $uploadedFile */
             $uploadedFile = $form['imageFile']->getData();
             if ($uploadedFile) {
-                $newFilename = $uploaderHelper->uploadArticleImage($uploadedFile, $waypoint->getImageFilename());
+                $newFilename = $uploaderHelper->uploadImage($uploadedFile, $waypoint->getImageFilename());
                 $waypoint->setImageFilename($newFilename);
             }
             // $newName = $this->getUploadedFileName($form);
@@ -108,6 +110,41 @@ class WaypointController extends AbstractController
             ]
         );
     }
+
+    /**
+     * @Route("/{id}/edit-details", name="waypoints_edit_details")
+     */
+    public function editDetails(Request $request, Waypoint $waypoint)
+    {
+        $form = $this->createForm(WaypointFormTypeDetails::class, $waypoint);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $waypoint = $form->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($waypoint);
+            $em->flush();
+            $this->addFlash('success', 'Waypoint updated!');
+
+            $redirectUri = $request->request->get('redirectUri');
+
+            if ($redirectUri) {
+                return $this->redirect($redirectUri);
+            }
+
+            return $this->redirectToRoute('waypoint_index');
+        }
+
+        return $this->render(
+            'waypoint/edit_details.html.twig',
+            [
+                'form'     => $form->createView(),
+                'waypoint' => $waypoint,
+            ]
+        );
+    }
+
+
 
     /**
      * @Route("/{id}", name="waypoint_delete", methods={"DELETE"})
@@ -152,4 +189,30 @@ class WaypointController extends AbstractController
 
         return $newFilename;
     }
+
+    /**
+     * @Route("/map", name="map-waypoints")
+     */
+    public function map(): JsonResponse
+    {
+        $waypoints = $this->getDoctrine()
+            ->getRepository(Waypoint::class)
+            ->findAll();
+
+        $wps = [];
+
+        foreach ($waypoints as $waypoint) {
+            $w = [];
+
+            $w['name'] = $waypoint->getName();
+            $w['lat'] = $waypoint->getLat();
+            $w['lng'] = $waypoint->getLon();
+            $w['id'] = $waypoint->getId();
+
+            $wps[] = $w;
+        }
+
+        return $this->json($wps);
+    }
+
 }

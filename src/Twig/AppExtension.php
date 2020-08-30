@@ -2,10 +2,13 @@
 
 namespace App\Twig;
 
+use App\Entity\Waypoint;
 use App\Service\UploaderHelper;
+use App\Service\WayPointHelper;
 use Psr\Container\ContainerInterface;
 use Symfony\Contracts\Service\ServiceSubscriberInterface;
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 use Twig\TwigFunction;
 
 class AppExtension extends AbstractExtension implements ServiceSubscriberInterface
@@ -22,6 +25,14 @@ class AppExtension extends AbstractExtension implements ServiceSubscriberInterfa
         ];
     }
 
+    public function getFilters(): array
+    {
+        return [
+            // new TwigFilter('cast_to_array', [$this, 'objectFilter']),
+            new TwigFilter('intelLink', [$this, 'intelLink']),
+        ];
+    }
+
     public function getUploadedAssetPath(string $path): string
     {
         return $this->container
@@ -32,6 +43,23 @@ class AppExtension extends AbstractExtension implements ServiceSubscriberInterfa
     {
         return [
             UploaderHelper::class,
+            WayPointHelper::class,
         ];
+    }
+
+    public function intelLink(Waypoint $wayPoint): string
+    {
+        return sprintf(
+            '%s/intel?ll=%s,%s&z=17&pll=%s,%s',
+            $this->container
+                ->get(WayPointHelper::class)
+                ->getIntelUrl()
+        //    $this->wayPointHelper->getIntelUrl()
+        ,
+            $wayPoint->getLat(),
+            $wayPoint->getLon(),
+            $wayPoint->getLat(),
+            $wayPoint->getLon(),
+        );
     }
 }

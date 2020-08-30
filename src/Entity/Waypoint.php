@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Service\UploaderHelper;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -45,15 +43,9 @@ class Waypoint
     private ?string $imageFilename = '';
 
     /**
-     * @ORM\OneToMany(targetEntity=WaypointReference::class, mappedBy="waypoint")
-     * @ORM\OrderBy({"position"="ASC"})
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="waypoints")
      */
-    private $waypointReferences;
-
-    public function __construct()
-    {
-        $this->waypointReferences = new ArrayCollection();
-    }
+    private ?Category $category = null;
 
     public function __toString()
     {
@@ -131,33 +123,14 @@ class Waypoint
         return $this;
     }
 
-    /**
-     * @return Collection|WaypointReference[]
-     */
-    public function getWaypointReferences(): Collection
+    public function getCategory(): ?Category
     {
-        return $this->waypointReferences;
+        return $this->category;
     }
 
-    public function addWaypointReference(WaypointReference $waypointReference): self
+    public function setCategory(?Category $category): self
     {
-        if (!$this->waypointReferences->contains($waypointReference)) {
-            $this->waypointReferences[] = $waypointReference;
-            $waypointReference->setWaypoint($this);
-        }
-
-        return $this;
-    }
-
-    public function removeWaypointReference(WaypointReference $waypointReference): self
-    {
-        if ($this->waypointReferences->contains($waypointReference)) {
-            $this->waypointReferences->removeElement($waypointReference);
-            // set the owning side to null (unless already changed)
-            if ($waypointReference->getWaypoint() === $this) {
-                $waypointReference->setWaypoint(null);
-            }
-        }
+        $this->category = $category;
 
         return $this;
     }

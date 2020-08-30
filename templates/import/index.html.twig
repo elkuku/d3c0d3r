@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - {{ 'Import'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'Import'|trans }}</h1>
+
+    {{ form_start(form) }}
+
+    {{ form_errors(form) }}
+
+    {{ form_row(form.multiexportjson) }}
+    <button type="submit" class="btn btn-primary">{{ 'Import'|trans }}</button>
+
+    {{ form_end(form) }}
+{% endblock %}
