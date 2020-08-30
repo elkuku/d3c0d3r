@@ -62,7 +62,6 @@ class WayPointHelper
 
 
         $imagePath = $this->getImagePath($wpId);
-        $file = new File($imagePath, false);
 
         $ch = curl_init($imageUrl);
         $fp = fopen($imagePath, 'wb');
@@ -76,7 +75,7 @@ class WayPointHelper
         curl_close($ch);
         fclose($fp);
 
-        return $file;
+        return new File($imagePath);
     }
 
     public function processImage(string $wpId, string $imageUrl): string
