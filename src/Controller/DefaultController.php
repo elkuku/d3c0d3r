@@ -20,7 +20,7 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/admin/upload/test", name="upload_test")
+     * Route("/admin/upload/test", name="upload_test")
      */
     public function temporaryUploadAction(Request $request)
     {

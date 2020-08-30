@@ -1,0 +1,3 @@
+App\Entity\Category:
+    category1:
+        name: testCategory

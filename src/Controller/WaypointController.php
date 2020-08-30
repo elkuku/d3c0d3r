@@ -7,6 +7,7 @@ use App\Form\WaypointFormTypeDetails;
 use App\Form\WaypointType;
 use App\Repository\WaypointRepository;
 use App\Service\UploaderHelper;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -21,6 +22,7 @@ class WaypointController extends AbstractController
 {
     /**
      * @Route("/", name="waypoint_index", methods={"GET"})
+     * @IsGranted("ROLE_ADMIN")
      */
     public function index(WaypointRepository $waypointRepository): Response
     {
@@ -34,9 +36,12 @@ class WaypointController extends AbstractController
 
     /**
      * @Route("/new", name="waypoint_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
      */
-    public function new(Request $request, UploaderHelper $uploaderHelper): Response
-    {
+    public function new(
+        Request $request,
+        UploaderHelper $uploaderHelper
+    ): Response {
         $waypoint = new Waypoint();
         $form = $this->createForm(WaypointType::class, $waypoint);
         $form->handleRequest($request);
@@ -45,7 +50,10 @@ class WaypointController extends AbstractController
             /** @var UploadedFile $uploadedFile */
             $uploadedFile = $form['imageFile']->getData();
             if ($uploadedFile) {
-                $newFilename = $uploaderHelper->uploadImage($uploadedFile, $waypoint->getImageFilename());
+                $newFilename = $uploaderHelper->uploadImage(
+                    $uploadedFile,
+                    $waypoint->getImageFilename()
+                );
                 $waypoint->setImageFilename($newFilename);
             }
 
@@ -67,6 +75,7 @@ class WaypointController extends AbstractController
 
     /**
      * @Route("/{id}", name="waypoint_show", methods={"GET"}, requirements={"id"="\d+"})
+     * @IsGranted("ROLE_ADMIN")
      */
     public function show(Waypoint $waypoint): Response
     {
@@ -80,9 +89,13 @@ class WaypointController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="waypoint_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
      */
-    public function edit(Request $request, Waypoint $waypoint, UploaderHelper $uploaderHelper): Response
-    {
+    public function edit(
+        Request $request,
+        Waypoint $waypoint,
+        UploaderHelper $uploaderHelper
+    ): Response {
         $form = $this->createForm(WaypointType::class, $waypoint);
         $form->handleRequest($request);
 
@@ -90,7 +103,10 @@ class WaypointController extends AbstractController
             /** @var UploadedFile $uploadedFile */
             $uploadedFile = $form['imageFile']->getData();
             if ($uploadedFile) {
-                $newFilename = $uploaderHelper->uploadImage($uploadedFile, $waypoint->getImageFilename());
+                $newFilename = $uploaderHelper->uploadImage(
+                    $uploadedFile,
+                    $waypoint->getImageFilename()
+                );
                 $waypoint->setImageFilename($newFilename);
             }
             // $newName = $this->getUploadedFileName($form);
@@ -113,6 +129,7 @@ class WaypointController extends AbstractController
 
     /**
      * @Route("/{id}/edit-details", name="waypoints_edit_details")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function editDetails(Request $request, Waypoint $waypoint)
     {
@@ -138,16 +155,15 @@ class WaypointController extends AbstractController
         return $this->render(
             'waypoint/edit_details.html.twig',
             [
-                'form'     => $form->createView(),
+                'form' => $form->createView(),
                 'waypoint' => $waypoint,
             ]
         );
     }
 
-
-
     /**
      * @Route("/{id}", name="waypoint_delete", methods={"DELETE"})
+     * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Request $request, Waypoint $waypoint): Response
     {
@@ -192,6 +208,7 @@ class WaypointController extends AbstractController
 
     /**
      * @Route("/map", name="map-waypoints")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function map(): JsonResponse
     {
@@ -214,5 +231,4 @@ class WaypointController extends AbstractController
 
         return $this->json($wps);
     }
-
 }

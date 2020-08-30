@@ -7,6 +7,7 @@ use App\Form\ImportFormType;
 use App\Parser\WayPointParser;
 use App\Repository\WaypointRepository;
 use Exception;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,6 +17,7 @@ class ImportController extends AbstractController
 {
     /**
      * @Route("/import", name="import")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function index(
         Request $request,
