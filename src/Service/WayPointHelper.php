@@ -62,7 +62,7 @@ class WayPointHelper
 
 
         $imagePath = $this->getImagePath($wpId);
-        $file = new File($imagePath);
+        $file = new File($imagePath, false);
 
         $ch = curl_init($imageUrl);
         $fp = fopen($imagePath, 'wb');
