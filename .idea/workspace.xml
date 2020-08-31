@@ -12,7 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CategorizeWaypointsCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CategorizeWaypointsCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collection/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collection/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,7 +374,28 @@
       <option name="project" value="LOCAL" />
       <updated>1598872311459</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add commands">
+      <created>1598873345284</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1598873345284</updated>
+    </task>
+    <task id="LOCAL-00023" summary="idea">
+      <created>1598873361133</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1598873361133</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fix title">
+      <created>1598873370170</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1598873370170</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,9 +427,11 @@
     <MESSAGE value="Add ext-gd" />
     <MESSAGE value="Fix edit waypoint" />
     <MESSAGE value="Remove temp download" />
-    <MESSAGE value="idea" />
     <MESSAGE value="Fix image path" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix image path" />
+    <MESSAGE value="Add commands" />
+    <MESSAGE value="idea" />
+    <MESSAGE value="Fix title" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix title" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598451971751">
@@ -484,10 +514,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="446" y="156" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1598793786164" />
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1598872323065">
+    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1598873383436">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1598872323065" />
+    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1598873383436" />
     <state x="749" y="416" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598796833005">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
