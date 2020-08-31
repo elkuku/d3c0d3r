@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/WayPointHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/WayPointHelper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/waypoint/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/waypoint/edit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -354,9 +355,9 @@
     <MESSAGE value="Add access control" />
     <MESSAGE value="Fix upload images" />
     <MESSAGE value="Try this..." />
-    <MESSAGE value="idea" />
     <MESSAGE value="Add ext-gd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ext-gd" />
+    <MESSAGE value="idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598451971751">
@@ -463,7 +464,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Service/WayPointHelper.php</url>
-          <line>82</line>
+          <line>81</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
