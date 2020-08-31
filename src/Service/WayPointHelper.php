@@ -56,10 +56,9 @@ class WayPointHelper
     ): File {
         // $imagePath = $this->findImage($wpId);
 
-        if ($this->findImage($wpId) && false === $forceUpdate) {
+        if (false === $forceUpdate && $this->findImage($wpId)) {
             return new File($this->getImagePath($wpId));
         }
-
 
         $imagePath = $this->getImagePath($wpId);
 
@@ -87,12 +86,22 @@ class WayPointHelper
         $file = $this->downloadImage($wpId, $imageUrl);
 
         // Upload image
-        return $this->uploaderHelper->uploadImage($file, null);
+        $this->uploaderHelper->uploadImage($file, null);
+
+        $this->removeImage($file);
+
+        return $file->getFilename();
     }
 
     private function checkImageExists()
     {
+    }
 
+    private function removeImage(File $file): void
+    {
+        $fileSystem = new Filesystem();
+
+        $fileSystem->remove($file->getFilename());
     }
 
     public function getRootDir(): string
