@@ -12,8 +12,12 @@
   <component name="ChangeListManager">
     <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/WayPointHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/WayPointHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/waypoint/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/waypoint/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/UploaderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UploaderHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,7 +330,35 @@
       <option name="project" value="LOCAL" />
       <updated>1598828597884</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="idea">
+      <created>1598839384398</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1598839384398</updated>
+    </task>
+    <task id="LOCAL-00017" summary="idea">
+      <created>1598839402322</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598839402322</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fix edit waypoint">
+      <created>1598839414530</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1598839414530</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Remove temp download">
+      <created>1598839439828</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598839439828</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +389,9 @@
     <MESSAGE value="Try this..." />
     <MESSAGE value="Add ext-gd" />
     <MESSAGE value="idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea" />
+    <MESSAGE value="Fix edit waypoint" />
+    <MESSAGE value="Remove temp download" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove temp download" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598451971751">
@@ -440,10 +474,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="446" y="156" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1598793786164" />
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1598828609032">
+    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1598839463287">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1598828609032" />
+    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1598839463287" />
     <state x="749" y="416" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598796833005">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -474,7 +508,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Service/UploaderHelper.php</url>
-          <line>124</line>
+          <line>126</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
