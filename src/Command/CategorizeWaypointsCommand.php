@@ -97,11 +97,18 @@ class CategorizeWaypointsCommand extends Command
                             $category = $this->categoryRepository->findOneBy(
                                 ['id' => $catId]
                             );
+
+                            if (!$category) {
+                                throw new \UnexpectedValueException(
+                                    'Category is missing for id: '.$catId
+                                );
+                            }
+
                             // $io->text($waypoint->getName().': cat - '.$category->getName());
-                            $question = new ConfirmationQuestion(
-                                $waypoint->getName().' === "'
-                                .$category->getName().'"?'
-                            );
+                            // $question = new ConfirmationQuestion(
+                            //     $waypoint->getName().' === "'
+                            //     .$category->getName().'"?'
+                            // );
 
                             if (true)
                                 //     $questionHelper->ask(
