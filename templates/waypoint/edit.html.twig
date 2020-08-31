@@ -28,7 +28,7 @@
         <div class="col-sm-4">
             <h3>References</h3>
 
-            <ul class="list-group small js-reference-list" data-url="{{ path('admin_article_list_references', {id: waypoint.id}) }}"></ul>
+{#            <ul class="list-group small js-reference-list" data-url="{{ path('admin_article_list_references', {id: waypoint.id}) }}"></ul>#}
 
 {#            <ul class="list-group small">#}
 {#                {% for reference in waypoint.waypointReferences %}#}
@@ -46,12 +46,12 @@
 
             <hr>
 
-            <form action="{{ path('admin_waypoint_add_reference', {
-                id: waypoint.id
-            }) }}" method="POST" enctype="multipart/form-data" class="dropzone js-reference-dropzone">
-                <input type="file" name="reference">
-                <button type="submit" class="btn btn-sm btn-primary">Upload</button>
-            </form>
+{#            <form action="{{ path('admin_waypoint_add_reference', {#}
+{#                id: waypoint.id#}
+{#            }) }}" method="POST" enctype="multipart/form-data" class="dropzone js-reference-dropzone">#}
+{#                <input type="file" name="reference">#}
+{#                <button type="submit" class="btn btn-sm btn-primary">Upload</button>#}
+{#            </form>#}
         </div>
     </div>
 {% endblock %}
