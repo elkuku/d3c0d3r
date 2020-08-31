@@ -13,13 +13,8 @@
     <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/gallery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Command/CategorizeWaypointsCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CategorizeWaypointsCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collection/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/_delete_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collection/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collection/d3c0de.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/d3c0de.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fixtures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony-playground-one" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -395,7 +390,49 @@
       <option name="project" value="LOCAL" />
       <updated>1598873370170</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="idea">
+      <created>1598884012346</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884012346</updated>
+    </task>
+    <task id="LOCAL-00026" summary="idea">
+      <created>1598884023564</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884023564</updated>
+    </task>
+    <task id="LOCAL-00027" summary="CategorizeWaypointsCommand.php Check for missing category">
+      <created>1598884079981</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884079981</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add dev favicon">
+      <created>1598884109310</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884109310</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Twig form theme BS 4">
+      <created>1598884153447</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884153447</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Review gallery">
+      <created>1598884177622</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884177622</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +468,11 @@
     <MESSAGE value="Add commands" />
     <MESSAGE value="Fix title" />
     <MESSAGE value="idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea" />
+    <MESSAGE value="CategorizeWaypointsCommand.php Check for missing category" />
+    <MESSAGE value="Add dev favicon" />
+    <MESSAGE value="Twig form theme BS 4" />
+    <MESSAGE value="Review gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Review gallery" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598451971751">
@@ -454,10 +495,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="100" y="100" width="1720" height="844" key="DiffContextDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598794497925" />
-    <state x="748" y="279" key="FileChooserDialogImpl" timestamp="1598792853133">
+    <state x="748" y="279" key="FileChooserDialogImpl" timestamp="1598884306326">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="748" y="279" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1598792853132" />
+    <state x="748" y="279" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1598884306326" />
     <state width="1870" height="326" key="GridCell.Tab.0.bottom" timestamp="1598819812800">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -514,10 +555,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="446" y="156" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1598793786164" />
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1598873383436">
+    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1598884188985">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1598873383436" />
+    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1598884188985" />
     <state x="749" y="416" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598796833005">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
