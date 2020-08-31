@@ -429,9 +429,9 @@
     <MESSAGE value="Remove temp download" />
     <MESSAGE value="Fix image path" />
     <MESSAGE value="Add commands" />
-    <MESSAGE value="idea" />
     <MESSAGE value="Fix title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix title" />
+    <MESSAGE value="idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598451971751">
