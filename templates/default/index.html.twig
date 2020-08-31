@@ -3,5 +3,13 @@
 {% block title %}Hello DefaultController!{% endblock %}
 
 {% block body %}
-    Hey ;=)
+    {% if app.user %}
+        <div class="d-flex justify-content-center"><h1>D3c0d3r</h1></div>
+        <div class="d-flex justify-content-center">Welcome&nbsp;<code>{{ app.user.username }}</code></div>
+        <div class="d-flex justify-content-center">
+            <img src="{{ asset('build/img/category-puzzle-152-211911.png') }}" alt="d3c0d3r">
+        </div>
+    {% else %}
+        <div class="d-flex justify-content-center">Please log in...</div>
+    {% endif %}
 {% endblock %}

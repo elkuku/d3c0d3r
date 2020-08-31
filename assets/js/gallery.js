@@ -8,7 +8,6 @@ let id, img, modal
 
 function updateSelectedPoints() {
     $('#selectedPoints').html(selectedPoints)
-    // console.log('fnc'+selectedPoints)
 }
 
 $('#galleryModal').find('.btnSelect').on('click', function () {
@@ -32,13 +31,16 @@ $('#decodeSelected').one('click', function () {
 })
 
 $('.card-img-top').on('click', function () {
+    const jsData = $('#js-data')
+    console.log(jsData.data('uploadedAssetPath'))
     modal = $('#galleryModal')
     img = $(this)
     id = $(this).data('id')
 
     modal.find('.btnSelect').text(selectedPoints.indexOf(id) > -1 ? 'Deselect' : 'Select')
     modal.find('h5').html($(this).data('originalTitle'))
-    modal.find('img').attr('src', '/wp_images/' + $(this).data('guid') + '.jpg')
+    // modal.find('img').attr('src', '/wp_images/' + $(this).data('guid') + '.jpg')
+    modal.find('img').attr('src', jsData.data('uploadedAssetPath')+'/wp_images/' + $(this).data('guid') + '.jpg')
     modal.find('.intelLink').attr('href', $(this).data('intelLink'))
     modal.find('.editLink').attr('href', $(this).data('editLink'))
     let detailsLink = $(this).data('detailsLink')

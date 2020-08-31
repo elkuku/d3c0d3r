@@ -1,9 +1,12 @@
 <h1>{{ collection.name }}</h1>
 
-<div id="selectedPoints">
+<span id="js-data"
+    data-uploaded-asset-path="{{ uploaded_asset('') }}"
+></span>
 
-</div>
+<div id="selectedPoints"></div>
 <button id="decodeSelected">Decode</button>
+
 {% for category, catPoints in categories %}
 <div class="row">
     <h3>{{ category }}</h3>

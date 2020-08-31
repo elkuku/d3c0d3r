@@ -73,7 +73,9 @@ class UploaderHelper
 
     public function getPublicPath(string $path): string
     {
-        $fullPath = $this->publicAssetBaseUrl.'/'.$path;
+        $add = $path ? '/'.$path : '';
+
+        $fullPath = $this->publicAssetBaseUrl.$add;
 
         // if it's already absolute, just return
         if (strpos($fullPath, '://') !== false) {
@@ -82,7 +84,7 @@ class UploaderHelper
 
         // needed if you deploy under a subdirectory
         return $this->requestStackContext
-                ->getBasePath().$this->publicAssetBaseUrl.'/'.$path;
+                ->getBasePath().$this->publicAssetBaseUrl.$add;
     }
 
     /**

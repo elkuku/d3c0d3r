@@ -8,7 +8,7 @@ parameters:
 #    uploads_base_url: '%env(SITE_BASE_URL)%/%uploads_dir_name%'
 
     ### https://sfcasts-spacebar-kuku.s3.us-east-2.amazonaws.com/wp_images/under-construction-5f47c75604ccd.gif
-    uploads_base_url: 'https://%env(AWS_S3_BUCKET_NAME)%.s3.us-east-2.amazonaws.com/'
+    uploads_base_url: 'https://%env(AWS_S3_BUCKET_NAME)%.s3.us-east-2.amazonaws.com'
 
 services:
     # default configuration for services in *this* file
