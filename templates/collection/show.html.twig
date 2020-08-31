@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Collection{% endblock %}
+{% block title %}{{ collection.name }}{% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
@@ -19,9 +19,13 @@
 {% block body %}
     <div class="btn-group float-right">
 
-        <a class="btn btn-outline-secondary" href="{{ path('collection_index') }}">back to list</a>
+        <a class="btn btn-outline-secondary" href="{{ path('collection_index') }}">
+            <span class="oi oi-arrow-left"></span>
+        </a>
 
-        <a class="btn btn-outline-info" href="{{ path('collection_edit', {'id': collection.id}) }}">edit</a>
+        <a class="btn btn-outline-info" href="{{ path('collection_edit', {'id': collection.id}) }}">
+            <span class="oi oi-pencil"></span>
+        </a>
 
         {{ include('collection/_delete_form.html.twig') }}
     </div>

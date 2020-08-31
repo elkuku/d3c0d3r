@@ -7,7 +7,7 @@ let selectedPoints = []
 let id, img, modal
 
 function updateSelectedPoints() {
-    $('#selectedPoints').html(selectedPoints)
+    // $('#selectedPoints').html(selectedPoints)
 }
 
 $('#galleryModal').find('.btnSelect').on('click', function () {
@@ -26,8 +26,14 @@ $('#galleryModal').find('.btnSelect').on('click', function () {
     updateSelectedPoints()
 })
 
-$('#decodeSelected').one('click', function () {
-    window.location.href = '/collection/d3c0de?ids=' + selectedPoints.join(',')
+$('#decodeSelected').on('click', function () {
+    if (!selectedPoints.length) {
+        alert('Please select some points first!')
+    } else if (1 === selectedPoints.length) {
+        alert('OK now select some more points...')
+    } else {
+        window.location.href = '/collection/d3c0de?ids=' + selectedPoints.join(',')
+    }
 })
 
 $('.card-img-top').on('click', function () {
@@ -40,7 +46,7 @@ $('.card-img-top').on('click', function () {
     modal.find('.btnSelect').text(selectedPoints.indexOf(id) > -1 ? 'Deselect' : 'Select')
     modal.find('h5').html($(this).data('originalTitle'))
     // modal.find('img').attr('src', '/wp_images/' + $(this).data('guid') + '.jpg')
-    modal.find('img').attr('src', jsData.data('uploadedAssetPath')+'/wp_images/' + $(this).data('guid') + '.jpg')
+    modal.find('img').attr('src', jsData.data('uploadedAssetPath') + '/wp_images/' + $(this).data('guid') + '.jpg')
     modal.find('.intelLink').attr('href', $(this).data('intelLink'))
     modal.find('.editLink').attr('href', $(this).data('editLink'))
     let detailsLink = $(this).data('detailsLink')
