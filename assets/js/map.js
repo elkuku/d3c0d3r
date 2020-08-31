@@ -160,10 +160,8 @@ function copyToClipboard(elementId) {
     const text = $('#' + elementId).val()
     navigator.clipboard.writeText(text).then(function () {
         alert('Content has been copied to your clipboard.')
-        // console.log('Async: Copying to clipboard was successful!')
     }, function (err) {
         alert('Could not copy text: '+ err)
-        // console.error('Async: Could not copy text: ', err)
     })
 }
 

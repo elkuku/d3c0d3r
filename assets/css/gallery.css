@@ -5,3 +5,7 @@
 img.wpSelected {
     border: 3px solid lime;
 }
+
+h3.category {
+    color: lime;
+}

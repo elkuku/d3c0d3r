@@ -38,7 +38,6 @@ $('#decodeSelected').on('click', function () {
 
 $('.card-img-top').on('click', function () {
     const jsData = $('#js-data')
-    console.log(jsData.data('uploadedAssetPath'))
     modal = $('#galleryModal')
     img = $(this)
     id = $(this).data('id')

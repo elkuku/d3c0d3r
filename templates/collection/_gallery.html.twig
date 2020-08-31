@@ -9,7 +9,7 @@
 
 {% for category, catPoints in categories %}
 <div class="row">
-    <h3>{{ category }}</h3>
+    <h3 class="category">{{ category }}</h3>
     {% for point in catPoints %}
         <div class="card">
             <img class="card-img-top"
@@ -39,17 +39,15 @@
                 <div class="row">
                     <div class="col">
                         <img src="" alt="Image">
-
                     </div>
                     <div class="col">
                         <div class="detailsForm"></div>
-
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <a class="btn editLink">Edit</a>
-                <a class="btn btn-primary intelLink">Intel</a>
+                <a class="btn btn-primary intelLink" target="_blank">Intel</a>
 
                 <button type="button" class="btn btn-warning btnSelect">Select</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
