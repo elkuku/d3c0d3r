@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -10,11 +13,42 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="">
+    <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="Update deps">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c513eee-744f-497a-bd1b-60a5f014ade0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6c513eee-744f-497a-bd1b-60a5f014ade0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/gallery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/_gallery.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collection/d3c0de.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection/d3c0de.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/cache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/oneup_flysystem.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/oneup_flysystem.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/deprecations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/deprecations.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/GoogleAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/GoogleAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/auth/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auth/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +63,12 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="PhpDebugGeneral" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
@@ -176,6 +216,13 @@
       <path value="$PROJECT_DIR$/vendor/hautelook/alice-bundle" />
       <path value="$PROJECT_DIR$/vendor/theofidry/alice-data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/aws/aws-crt-php" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/runtime" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gdd2a1Wa8XvEsjxC91dPSm8bMQ" />
@@ -191,7 +238,8 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony-playground-one" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -432,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598884177622</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update deps">
+      <created>1633288897280</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1633288897280</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +503,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -472,97 +526,8 @@
     <MESSAGE value="Add dev favicon" />
     <MESSAGE value="Twig form theme BS 4" />
     <MESSAGE value="Review gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Review gallery" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598451971751">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="560" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598451971751" />
-    <state x="653" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598449584974">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="653" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1598449584974" />
-    <state x="755" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1598706910871">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="755" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1044@0.0.1920.1044" timestamp="1598706910871" />
-    <state x="698" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598706805701">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="698" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598706805701" />
-    <state x="100" y="100" width="1720" height="844" key="DiffContextDialog" timestamp="1598794497926">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="100" y="100" width="1720" height="844" key="DiffContextDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598794497925" />
-    <state x="748" y="279" key="FileChooserDialogImpl" timestamp="1598884306326">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="748" y="279" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1598884306326" />
-    <state width="1870" height="326" key="GridCell.Tab.0.bottom" timestamp="1598819812800">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812800" />
-    <state width="1870" height="326" key="GridCell.Tab.0.center" timestamp="1598819812799">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812799" />
-    <state width="1870" height="326" key="GridCell.Tab.0.left" timestamp="1598819812799">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812799" />
-    <state width="1870" height="326" key="GridCell.Tab.0.right" timestamp="1598819812799">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812799" />
-    <state width="1870" height="326" key="GridCell.Tab.1.bottom" timestamp="1598819812802">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812802" />
-    <state width="1870" height="326" key="GridCell.Tab.1.center" timestamp="1598819812801">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.1.center/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812801" />
-    <state width="1870" height="326" key="GridCell.Tab.1.left" timestamp="1598819812800">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.1.left/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812800" />
-    <state width="1870" height="326" key="GridCell.Tab.1.right" timestamp="1598819812801">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.1.right/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812801" />
-    <state width="1870" height="326" key="GridCell.Tab.2.bottom" timestamp="1598819812803">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.2.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812803" />
-    <state width="1870" height="326" key="GridCell.Tab.2.center" timestamp="1598819812802">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.2.center/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812802" />
-    <state width="1870" height="326" key="GridCell.Tab.2.left" timestamp="1598819812802">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.2.left/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812802" />
-    <state width="1870" height="326" key="GridCell.Tab.2.right" timestamp="1598819812803">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state width="1870" height="326" key="GridCell.Tab.2.right/0.0.1920.1044@0.0.1920.1044" timestamp="1598819812803" />
-    <state x="714" y="226" key="NewPhpClassDialog" timestamp="1598456777100">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="714" y="226" key="NewPhpClassDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598456777100" />
-    <state x="446" y="156" key="SettingsEditor" timestamp="1598793786164">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="446" y="156" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1598793786164" />
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2" timestamp="1598884188985">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="560" y="257" width="800" height="530" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1598884188985" />
-    <state x="749" y="416" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598796833005">
-      <screen x="0" y="0" width="1920" height="1044" />
-    </state>
-    <state x="749" y="416" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1598796833005" />
+    <MESSAGE value="Update deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update deps" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="test">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.19">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.29">
     <root id="1">
       <ServerVersion>3.31.1</ServerVersion>
     </root>
@@ -157,8 +157,8 @@
     </key>
     <foreign-key id="41" parent="11" name="FK_B3DC588112469DE2">
       <ColNames>category_id</ColNames>
-      <RefTableName>category</RefTableName>
       <RefColNames>id</RefColNames>
+      <RefTableName>category</RefTableName>
     </foreign-key>
   </database-model>
 </dataSource>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="main@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.19">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.29">
     <root id="1">
       <ServerVersion>5.7.31</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -723,8 +723,6 @@
     </collation>
     <user id="226" parent="1" name="main">
       <Host>%</Host>
-      <ObjectGrants>ALL PRIVILEGES|main:null
-</ObjectGrants>
     </user>
     <table id="227" parent="3" name="doctrine_migration_versions">
       <Collation>utf8_unicode_ci</Collation>
@@ -829,8 +827,8 @@
     </key>
     <foreign-key id="249" parent="229" name="FK_635D5F317BB1FD97">
       <ColNames>waypoint_id</ColNames>
-      <RefTableName>waypoint</RefTableName>
       <RefColNames>id</RefColNames>
+      <RefTableName>waypoint</RefTableName>
     </foreign-key>
   </database-model>
 </dataSource>
