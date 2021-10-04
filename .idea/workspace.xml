@@ -465,7 +465,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633373043316</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add googleId">
+      <created>1633373520108</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1633373520108</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Update idea files">
+      <created>1633373529010</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1633373529010</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,6 +520,7 @@
     <MESSAGE value="Review gallery" />
     <MESSAGE value="Update deps" />
     <MESSAGE value="Update all" />
+    <MESSAGE value="Add googleId" />
     <MESSAGE value="Update idea files" />
     <option name="LAST_COMMIT_MESSAGE" value="Update idea files" />
   </component>
