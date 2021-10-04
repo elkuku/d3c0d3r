@@ -13,43 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="Update deps">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/17e807b1-3b4c-492b-8714-1744b580b381.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c513eee-744f-497a-bd1b-60a5f014ade0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6c513eee-744f-497a-bd1b-60a5f014ade0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/cache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/oneup_flysystem.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/oneup_flysystem.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/deprecations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/deprecations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/GoogleAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/GoogleAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/auth/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auth/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="10068323-03b9-4b15-b3dd-dd889c970fda" name="Default Changelist" comment="Update idea files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -487,7 +451,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633288897280</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Update all">
+      <created>1633373016019</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1633373016019</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Update idea files">
+      <created>1633373043316</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1633373043316</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +505,9 @@
     <MESSAGE value="Twig form theme BS 4" />
     <MESSAGE value="Review gallery" />
     <MESSAGE value="Update deps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update deps" />
+    <MESSAGE value="Update all" />
+    <MESSAGE value="Update idea files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update idea files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
