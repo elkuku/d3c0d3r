@@ -5,7 +5,6 @@ namespace App\Security;
 use App\Entity\User;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Exception;
 use KnpU\OAuth2ClientBundle\Client\OAuth2ClientInterface;
 use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
@@ -110,14 +109,14 @@ class GoogleAuthenticator extends AbstractAuthenticator
                 ->setEmail($googleUser->getEmail())
                 ->setGoogleId($googleUser->getId());
 
-            try {
-                $groupId = $this->telegramBotHelper->getGroupId('admin');
-                $this->telegramAdminMessageHelper->sendNewUserMessage(
-                    $groupId,
-                    $user
-                );
-            } catch (Exception) {
-            }
+            // try {
+            //     $groupId = $this->telegramBotHelper->getGroupId('admin');
+            //     $this->telegramAdminMessageHelper->sendNewUserMessage(
+            //         $groupId,
+            //         $user
+            //     );
+            // } catch (Exception) {
+            // }
         }
 
         $this->entityManager->persist($user);
