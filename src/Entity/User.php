@@ -31,6 +31,11 @@ class User implements UserInterface, Serializable
     private string $role = 'ROLE_USER';
 
     /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $googleId;
+
+    /**
      * {@inheritdoc}
      * @return null
      */
@@ -147,5 +152,17 @@ class User implements UserInterface, Serializable
             $this->email,
             )
             = unserialize($serialized);
+    }
+
+    public function getGoogleId(): ?string
+    {
+        return $this->googleId;
+    }
+
+    public function setGoogleId(?string $googleId): self
+    {
+        $this->googleId = $googleId;
+
+        return $this;
     }
 }
