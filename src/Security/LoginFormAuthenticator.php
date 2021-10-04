@@ -2,53 +2,64 @@
 
 namespace App\Security;
 
-use App\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
-
+use JetBrains\PhpStorm\ArrayShape;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-use Symfony\Component\Security\Core\Exception\CustomUserMessageAuthenticationException;
-use Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException;
 use Symfony\Component\Security\Core\Security;
-use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Security\Core\User\UserProviderInterface;
-use Symfony\Component\Security\Csrf\CsrfToken;
-use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
-use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
+use Symfony\Component\Security\Http\Authenticator\AbstractLoginFormAuthenticator;
+use Symfony\Component\Security\Http\Authenticator\Passport\Badge\CsrfTokenBadge;
+use Symfony\Component\Security\Http\Authenticator\Passport\Badge\UserBadge;
+use Symfony\Component\Security\Http\Authenticator\Passport\SelfValidatingPassport;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
 use UnexpectedValueException;
+use Symfony\Component\Security\Http\Authenticator\Passport\PassportInterface;
 
-class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
+class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
 {
     use TargetPathTrait;
 
-    private EntityManagerInterface $entityManager;
-    private RouterInterface $router;
-    private CsrfTokenManagerInterface $csrfTokenManager;
-    private string $appEnv;
-
-    public function __construct(EntityManagerInterface $entityManager, RouterInterface $router, CsrfTokenManagerInterface $csrfTokenManager, string $appEnv)
-    {
-        $this->entityManager = $entityManager;
-        $this->router = $router;
-        $this->csrfTokenManager = $csrfTokenManager;
-        $this->appEnv = $appEnv;
+    public function __construct(
+        private UrlGeneratorInterface $urlGenerator,
+        private string $appEnv
+    ) {
     }
 
-    public function supports(Request $request):bool
+    public function supports(Request $request): bool
     {
         return 'login' === $request->attributes->get('_route')
             && $request->isMethod('POST');
     }
 
-    public function getCredentials(Request $request)
+    protected function getLoginUrl(Request $request): string
     {
+        return $this->urlGenerator->generate('login');
+    }
+
+    public function authenticate(Request $request): PassportInterface
+    {
+        if (false === in_array($this->appEnv, ['dev', 'test'])) {
+            throw new UnexpectedValueException('GTFO!');
+        }
+
+        $credentials = $this->getCredentials($request);
+
+        return new SelfValidatingPassport(
+            new UserBadge($credentials['email'] ?? ''),
+            [new CsrfTokenBadge('login', $credentials['csrf_token'] ?? '')]
+        );
+    }
+
+    #[ArrayShape(['email' => "string", 'csrf_token' => "string"])]
+    public function getCredentials(
+        Request $request
+    ): array {
         $credentials = [
-            'email'      => $request->request->get('email'),
+            'email' => $request->request->get('email'),
             'csrf_token' => $request->request->get('_csrf_token'),
         ];
+
         $request->getSession()->set(
             Security::LAST_USERNAME,
             $credentials['email']
@@ -57,44 +68,20 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         return $credentials;
     }
 
-    public function getUser($credentials, UserProviderInterface $userProvider)
-    {
-        $token = new CsrfToken('authenticate', $credentials['csrf_token']);
-        if (!$this->csrfTokenManager->isTokenValid($token)) {
-            throw new InvalidCsrfTokenException('Invalid token');
-        }
+    public function onAuthenticationSuccess(
+        Request $request,
+        TokenInterface $token,
+        $firewallName
+    ): RedirectResponse {
+        $targetPath = $this->getTargetPath(
+            $request->getSession(),
+            $firewallName
+        );
 
-        $user = $this->entityManager->getRepository(User::class)
-            ->findOneBy(['email' => $credentials['email']]);
-
-        if (!$user) {
-            // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
-        }
-
-        return $user;
-    }
-
-    public function checkCredentials($credentials, UserInterface $user):bool
-    {
-        if ('dev' !== $this->appEnv) {
-            throw new UnexpectedValueException('GTFO!');
-        }
-
-        return true;
-    }
-
-    public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
-    {
-        if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
+        if ($targetPath) {
             return new RedirectResponse($targetPath);
         }
 
-        return new RedirectResponse($this->router->generate('default'));
-    }
-
-    protected function getLoginUrl():string
-    {
-        return $this->router->generate('login');
+        return new RedirectResponse($this->urlGenerator->generate('default'));
     }
 }

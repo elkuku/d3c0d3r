@@ -1,5 +1,6 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    enable_authenticator_manager: true
     providers:
         database_users:
             entity: { class: App:User, property: email }
@@ -8,20 +9,26 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
             lazy: true
-#            switch_user: true
+            entry_point: App\Security\LoginFormAuthenticator
+#            provider: users_in_memory
 
-            guard:
-                authenticators:
-                    - App\Security\LoginFormAuthenticator
-                    - App\Security\GoogleAuthenticator
-                entry_point: App\Security\LoginFormAuthenticator
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+            custom_authenticators:
+
+                - App\Security\LoginFormAuthenticator
+                - App\Security\GoogleAuthenticator
 
             form_login:
                 login_path: login
                 check_path: login
-                csrf_token_generator: security.csrf.token_manager
+                enable_csrf: true
+#                csrf_token_generator: security.csrf.token_manager
 
             logout:
                 path: /logout
